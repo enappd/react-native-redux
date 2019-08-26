@@ -1,7 +1,7 @@
-# facebook-login-rn
-Sample repository for React Native Facebook Login 
+# redux-react-native
+Sample repository for Connect Redux with React Native app
 
-For steps and instructions, read blog - https://enappd.com/blog/facebook-login-in-react-native-apps/89
+For steps and instructions, read blog - https://enappd.com/blog/redux-in-react-native-app/92/
 
 
 
