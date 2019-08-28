@@ -14,9 +14,8 @@ import {
   Text
 } from 'react-native';
 import { connect } from 'react-redux';
-import { changeCount } from './actions/counts';
 import { bindActionCreators } from 'redux';
-
+import * as countActions from './actions/counts';
 
 class App extends Component {
   decrementCount() {
@@ -37,7 +36,7 @@ class App extends Component {
           title="increment"
           onPress={() => this.incrementCount()}
         />
-        <Text style={styles.textCenter}>0</Text>
+        <Text style={styles.textCenter}>{count}</Text>
         <Button
           title="decrement"
           onPress={() => this.decrementCount()}
@@ -59,12 +58,12 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = state => ({
-  count: state.count,
+  count: state.count.count,
 });
 
 const ActionCreators = Object.assign(
   {},
-  changeCount,
+  countActions,
 );
 const mapDispatchToProps = dispatch => ({
   actions: bindActionCreators(ActionCreators, dispatch),
